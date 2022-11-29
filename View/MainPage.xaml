@@ -13,8 +13,5 @@
         <vm:MainPageViewModel></vm:MainPageViewModel>
     </Page.DataContext>
     
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="133,169,0,0" TextWrapping="Wrap" Text="zadaniya skopina dlja pidorov" VerticalAlignment="Top" Width="215"/>
-
-    </Grid>
+    <Grid/>
 </Page>
