@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HEADMEN EYE", "HEADMEN EYE.csproj", "{D5FBB775-5122-4E30-B582-A7A208F275D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5FBB775-5122-4E30-B582-A7A208F275D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5FBB775-5122-4E30-B582-A7A208F275D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5FBB775-5122-4E30-B582-A7A208F275D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5FBB775-5122-4E30-B582-A7A208F275D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4B0B2A1-43A3-42E4-8DA6-B1F79907C021}
+	EndGlobalSection
+EndGlobal
