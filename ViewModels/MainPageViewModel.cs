@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace HEADMEN_EYE.ViewModels
 {
-    class GroupListPageViewModel : ViewModelBase
+    class MainPageViewModel : ViewModelBase
     {
-
     }
 }

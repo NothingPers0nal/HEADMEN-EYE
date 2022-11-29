@@ -14,6 +14,15 @@
             <DataTemplate DataType="{x:Type vm:GroupListPageViewModel}">
                 <v:GroupList />
             </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type vm:PassesListPageViewModel}">
+                <v:PassesList />
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type vm:MainPageViewModel}">
+                <v:MainPage />
+            </DataTemplate>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

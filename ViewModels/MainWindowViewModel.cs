@@ -11,29 +11,50 @@ namespace HEADMEN_EYE.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase // Показываем, что наследуется от ViewModelBase
     {
+        public MainWindowViewModel()
+        {
+            ActivePage = new MainPageViewModel();
+        }
 
         private ViewModelBase activePage;
 
+        // Свойство, позволяющее получить значение переменной и установить его
         public ViewModelBase ActivePage
         {
-            get { return activePage; }
+            get { return activePage; } // Отдаёт значение из программы
             set 
             { 
                 activePage = value;
-                OnPropertyChanged();
+                OnPropertyChanged(); // Сообщает об изменении
             }
 
         }
-        
 
-
-        public ICommand ChangeActivePage 
+        // Свойство, создающее команду, которая меняет активную страницу и создаёт новую ViewModel
+        public ICommand ChangeActivePageToGroups 
         {
             get 
             {
                 return new RelayCommand((obj) => { ActivePage = new GroupListPageViewModel(); });
             }
         }
+
+        public ICommand ChangeActivePageToPasses
+        {
+            get
+            {
+                return new RelayCommand((obj) => { ActivePage = new PassesListPageViewModel(); });
+            }
+        }
+
+        public ICommand ChangeToMainPage
+        {
+            get
+            {
+                return new RelayCommand((obj) => { ActivePage = new MainPageViewModel(); });
+            }
+        }
+
 
     }
 }

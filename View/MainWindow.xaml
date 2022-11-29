@@ -14,21 +14,21 @@
     
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="930"></ColumnDefinition>
+            <ColumnDefinition Width="220"></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" HorizontalAlignment="Left" Height="521" Margin="10,10,0,0" VerticalAlignment="Top" Orientation="Horizontal">
             <Grid x:Name="gridWithButtons" Width="205" Height="521" VerticalAlignment="Bottom">
-                <Button x:Name="buttonGroups" Content="Группы" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="182" Background="#FF676FC5" FontFamily="Microsoft YaHei" FontSize="20" BorderBrush="#FF676FC5" Command="{Binding ChangeActivePage}"/>
+                <Button x:Name="buttonGroups" Content="Группы" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="182" Background="#FF676FC5" FontFamily="Microsoft YaHei" FontSize="20" BorderBrush="#FF676FC5" Command="{Binding ChangeActivePageToGroups}"/>
                 <Button x:Name="buttonAttendance" Content="Посещаемость" HorizontalAlignment="Left" Height="60" Margin="10,85,0,0" VerticalAlignment="Top" Width="182" Background="#FF676FC5" BorderBrush="#FF676FC5" FontFamily="Microsoft YaHei" FontSize="20"/>
-                <Button x:Name="buttonPasses" Content="Пропуски" HorizontalAlignment="Left" Height="60" Margin="10,160,0,0" VerticalAlignment="Top" Width="182" FontFamily="Microsoft YaHei" FontSize="20" Background="#FF676FC5" BorderBrush="#FF676FC5"/>
+                <Button x:Name="buttonPasses" Content="Пропуски" HorizontalAlignment="Left" Height="60" Margin="10,160,0,0" VerticalAlignment="Top" Width="182" FontFamily="Microsoft YaHei" FontSize="20" Background="#FF676FC5" BorderBrush="#FF676FC5" Command="{Binding ChangeActivePageToPasses}"/>
                 <Button x:Name="buttonExit" Content="Закрыть" HorizontalAlignment="Left" Height="45" Margin="10,465,0,0" VerticalAlignment="Top" Width="83" Background="#FF676FC5" BorderBrush="#FF676FC5" FontFamily="Microsoft YaHei" FontSize="14" Click="buttonExit_Click" FontWeight="Bold"/>
-                <Button x:Name="buttonOnMain" Content="На главную" HorizontalAlignment="Left" Height="45" Margin="98,465,0,0" VerticalAlignment="Top" Width="94" Background="#FF676FC5" BorderBrush="#FF676FC5" FontFamily="Microsoft YaHei" FontSize="14" FontWeight="Bold"/>
+                <Button x:Name="buttonOnMain" Content="На главную" HorizontalAlignment="Left" Height="45" Margin="98,465,0,0" VerticalAlignment="Top" Width="94" Background="#FF676FC5" BorderBrush="#FF676FC5" FontFamily="Microsoft YaHei" FontSize="14" FontWeight="Bold" Command="{Binding ChangeToMainPage}"/>
             </Grid>
             
 
         </StackPanel>
-        <Frame Grid.Column="1" Content="{Binding ActivePage}"></Frame>
+        <Frame Grid.Column="1" Content="{Binding ActivePage}" NavigationUIVisibility="Hidden"></Frame>
          
     </Grid>
     

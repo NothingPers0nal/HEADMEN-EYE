@@ -1,4 +1,4 @@
-﻿<Page x:Class="HEADMEN_EYE.View.GroupList"
+﻿<Page x:Class="HEADMEN_EYE.View.PassesList"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,15 +7,12 @@
       xmlns:vm="clr-namespace:HEADMEN_EYE.ViewModels"
       mc:Ignorable="d" 
       Height="510" Width="710"
-      Title="GroupList" Background="#FFCCD2F9">
+      Title="PassesList">
+
     <Page.DataContext>
-        <vm:GroupListPageViewModel></vm:GroupListPageViewModel>
+        <vm:PassesListPageViewModel></vm:PassesListPageViewModel>
     </Page.DataContext>
-    <ListView HorizontalAlignment="Left" VerticalAlignment="Top" Height="490" Width="690" Margin="10,10,0,0">
-        <ListView.View>
-            <GridView>
-                <GridViewColumn/>
-            </GridView>
-        </ListView.View>
-    </ListView>
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="490" Margin="10,10,0,0" VerticalAlignment="Top" Width="690"/>
+    </Grid>
 </Page>
