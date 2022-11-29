@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 
 namespace HEADMEN_EYE.ViewModels
 {
@@ -11,27 +12,28 @@ namespace HEADMEN_EYE.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public virtual void OnPropertyChanged(string propertyName)
+        // Сообщает о том, что произошли изменения.
+        // Принимает название свойства, которое меняется.
+        public virtual void OnPropertyChanged([CallerMemberName] string property = "")
         {
-            PropertyChangedEventHandler handler = this.PropertyChanged;
+            PropertyChangedEventHandler handler = PropertyChanged;
             if (handler != null)
-            {
-                handler.Invoke(this, new PropertyChangedEventArgs(propertyName));
-            }
+                handler.Invoke(this, new PropertyChangedEventArgs(property));
         }
 
-        //  Сборщик мусора
+        //  Сборщик мусора.
         public void Dispose()
         {
             Dispose(true);
         }
 
         private bool _Disposed;
+        // Наследники смогут переопределить.
         protected virtual void Dispose(bool Disposing)
         {
             if (!Disposing || _Disposed) return;
             _Disposed = true;
-            // Освобождение управляемых ресурсов
+            // Освобождение управляемых ресурсов.
         }
     }
 }

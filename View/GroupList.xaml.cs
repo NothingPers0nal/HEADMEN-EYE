@@ -16,18 +16,13 @@ using System.Windows.Shapes;
 namespace HEADMEN_EYE.View
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для GroupList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GroupList : Page
     {
-        public MainWindow()
+        public GroupList()
         {
             InitializeComponent();
-        }
-
-        private void buttonExit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
     }
 }
