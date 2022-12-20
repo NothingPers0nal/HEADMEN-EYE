@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HEADMEN_EYE.ViewModels;
 
 namespace HEADMEN_EYE.View
 {
@@ -23,6 +24,8 @@ namespace HEADMEN_EYE.View
         public GroupList()
         {
             InitializeComponent();
+            DataContext = new GroupListPageViewModel();
+
         }
 
     }

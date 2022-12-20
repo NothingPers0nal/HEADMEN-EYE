@@ -12,12 +12,12 @@ using Ultz.BeagleFramework.SQLite;
 
 namespace HEADMEN_EYE.ViewModels
 {
-    class GroupListPageViewModel : ViewModelBase
+    public class GroupListPageViewModel : ViewModelBase
     {
         public GroupListPageViewModel()
         {
             ConnectDB dBContext = new ConnectDB();
-            SqliteConnection connection = new SqliteConnection("Data Source=HEADMEN_EYE_DB.db");
+            SqliteConnection connection = new SqliteConnection(@"Data Source=Data\HEADMEN_EYE_DB0.db");
             DataTable dt = new DataTable();
             SqliteDataAdapter sqliteDataAdapter = new SqliteDataAdapter();
 
