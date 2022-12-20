@@ -4,16 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 
 
 namespace HEADMEN_EYE.Data
 {
-    class ConnectDB : DbContext
+    public class ConnectDB : DbContext
     {
-        //  This class connect program with DB
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //This function connect program with DB
+        protected override void OnConfiguring(DbContextOptionsBuilder connectionWithDB)
         {
-            optionsBuilder.UseSqlite("Data Source = HEADMEN_EYE_DB.db");
+            connectionWithDB.UseSqlite("Data Source = HEADMEN_EYE_DB.db");
         }
 
     }

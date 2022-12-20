@@ -9,10 +9,16 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.17" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="Ultz.BeagleFramework.SQLite" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="View\eye icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="packages\" />
   </ItemGroup>
 
 </Project>

@@ -24,5 +24,6 @@ namespace HEADMEN_EYE.View
         {
             InitializeComponent();
         }
+
     }
 }

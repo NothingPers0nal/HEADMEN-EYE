@@ -11,10 +11,13 @@
     <Page.DataContext>
         <vm:GroupListPageViewModel></vm:GroupListPageViewModel>
     </Page.DataContext>
-    <ListView HorizontalAlignment="Left" VerticalAlignment="Top" Height="490" Width="690" Margin="10,10,0,0">
+    <ListView HorizontalAlignment="Left" VerticalAlignment="Top" Height="490" Width="690" Margin="10,10,0,0" ItemsSource="{Binding dataView}">
         <ListView.View>
             <GridView>
-                <GridViewColumn/>
+                <GridViewColumn DisplayMemberBinding="{Binding Path=NameStdnt}" Header="Name" Width="170"/>
+                <GridViewColumn DisplayMemberBinding="{Binding Path=SurnameStdnt}" Header="Surname" Width="170"/>
+                <GridViewColumn DisplayMemberBinding="{Binding Path=PatronymicStdnt}" Header="Patronymic" Width="170"/>
+                <GridViewColumn DisplayMemberBinding="{Binding Path=StudentGroup}" Header="Group" Width="170"/>
             </GridView>
         </ListView.View>
     </ListView>

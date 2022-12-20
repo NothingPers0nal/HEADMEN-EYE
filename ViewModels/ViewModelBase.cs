@@ -35,5 +35,6 @@ namespace HEADMEN_EYE.ViewModels
             _Disposed = true;
             // Освобождение управляемых ресурсов.
         }
+
     }
 }
