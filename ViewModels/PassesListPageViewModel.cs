@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HEADMEN_EYE.Data;
+using System.Data;
+using Microsoft.Data.Sqlite;
+using Ultz.BeagleFramework.SQLite;
 
 namespace HEADMEN_EYE.ViewModels
 {

@@ -1,10 +1,4 @@
 ﻿using HEADMEN_EYE.Infrastructure;
-using HEADMEN_EYE.View;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace HEADMEN_EYE.ViewModels
@@ -55,6 +49,13 @@ namespace HEADMEN_EYE.ViewModels
             }
         }
 
+        public ICommand ChangeActivePageToAttendance
+        {
+            get
+            {
+                return new RelayCommand((obj) => { ActivePage = new AttendancePageViewModel(); });
+            }
+        }
 
     }
 }
