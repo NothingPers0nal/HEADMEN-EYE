@@ -16,23 +16,32 @@ namespace HEADMEN_EYE.ViewModels
     {
         public GroupListPageViewModel()
         {
-            //ConnectDB connection = new ConnectDB();
+            ConnectDB dBContext = new ConnectDB();
             SqliteConnection connection = new SqliteConnection("Data Source=HEADMEN_EYE_DB.db");
             DataTable dt = new DataTable();
             SqliteDataAdapter sqliteDataAdapter = new SqliteDataAdapter();
 
             connection.Open();
             SqliteCommand command = new SqliteCommand("SELECT NameStdnt, SurnameStdnt, PatronymicStdnt, StudentGroup FROM Students", connection);
-            //sqliteDataAdapter.SelectCommand = new SqlCommand("SELECT NameStdnt, SurnameStdnt, PatronymicStdnt, StudentGroup FROM Students", connection);
             sqliteDataAdapter.SelectCommand = command;
             sqliteDataAdapter.Fill(dt);
 
+            
             dataView = dt.DefaultView;
-
+            
+            //System.Diagnostics.Debug.WriteLine(dt.Columns["NameStdnt"].ToString());
             connection.Close();
         }
 
-        public DataView dataView { get; private set; }
+        private DataView dataView;
+
+        public DataView Dataview
+        {
+            get { return dataView; }
+            set { dataView = value; OnPropertyChanged(); }
+        }
+
+        //public DataView dataView { get; private set; }
 
     }
 }

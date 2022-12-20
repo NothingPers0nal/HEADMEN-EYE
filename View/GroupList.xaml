@@ -11,7 +11,7 @@
     <Page.DataContext>
         <vm:GroupListPageViewModel></vm:GroupListPageViewModel>
     </Page.DataContext>
-    <ListView HorizontalAlignment="Left" VerticalAlignment="Top" Height="490" Width="690" Margin="10,10,0,0" ItemsSource="{Binding dataView}">
+    <ListView HorizontalAlignment="Left" VerticalAlignment="Top" Height="490" Width="680" Margin="10,10,0,0" ItemsSource="{Binding Dataview}" FontSize="14" Foreground="Black" BorderBrush="#FFCCD2F9">
         <ListView.View>
             <GridView>
                 <GridViewColumn DisplayMemberBinding="{Binding Path=NameStdnt}" Header="Name" Width="170"/>
