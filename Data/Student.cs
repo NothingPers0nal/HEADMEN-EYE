@@ -12,6 +12,7 @@ namespace HEADMEN_EYE.Data
         public string SurnameStdnt { get; set; }
         public string PatronymicStdnt { get; set; }
         public string StudentGroup { get; set; }
+        public string Passes { get; set; }
 
         public virtual StudentGroup StudentGroupNavigation { get; set; }
     }

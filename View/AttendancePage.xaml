@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:HEADMEN_EYE.View"
-      xmlns:vm="clr-namespace:HEADMEN_EYE.ViewModels"
+      xmlns:vm="clr-namespace:HEADMEN_EYE.ViewModels" d:DataContext="{d:DesignInstance Type=vm:AttendancePageViewModel}"
       mc:Ignorable="d"
       Height="510" Width="710"
       Title="AttendancePage">
@@ -13,11 +13,12 @@
     </Page.DataContext>
 
     <Grid Background="#FFCCD2F9">
-        <ComboBox x:Name="surnameComboBox" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="300" Background="#FFCCD2F9" BorderBrush="#FF676FC5" FontSize="14" ItemBindingGroup="{Binding Dataview}"/>
-        <ComboBox x:Name="nameComboBox" HorizontalAlignment="Left" Height="65" Margin="400,10,0,0" VerticalAlignment="Top" Width="300" BorderBrush="#FF676FC5" FontSize="14" Background="#FFCCD2F9"/>
+        <ComboBox x:Name="surnameComboBox" HorizontalAlignment="Left" Height="65" Margin="10,10,0,0" VerticalAlignment="Top" Width="190" Background="#FFCCD2F9" BorderBrush="#FF676FC5" FontSize="20" ItemsSource="{Binding CollectionSurname}"/>
+        <ComboBox x:Name="nameComboBox" HorizontalAlignment="Left" Height="65" Margin="212,10,0,0" VerticalAlignment="Top" Width="190" BorderBrush="#FF676FC5" FontSize="20" Background="#FFCCD2F9" ItemsSource="{Binding CollectionName}"/>
         <Label Content="Количество пропущенных часов:" HorizontalAlignment="Left" Height="48" Margin="10,116,0,0" VerticalAlignment="Top" Width="312" FontWeight="Bold" FontSize="18"/>
-        <TextBox HorizontalAlignment="Left" Height="48" Margin="327,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" SelectionBrush="#FF1B266C" Background="#FFCCD2F9" BorderBrush="#FF676FC5" FontSize="14" FontWeight="Bold"/>
-        <Button Content="Запомнить прогульщика" HorizontalAlignment="Center" Height="85" Margin="0,320,0,0" VerticalAlignment="Top" Width="378" BorderBrush="#FF676FC5" Background="#FF676FC5" FontSize="28" FontWeight="Bold"/>
+        <TextBox x:Name="hoursTextBox" HorizontalAlignment="Left" Height="48" Margin="327,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" SelectionBrush="#FF1B266C" Background="#FFCCD2F9" BorderBrush="#FF676FC5" FontSize="14" FontWeight="Bold"/>
+        <Button x:Name="btnSetPasses" Content="Запомнить прогульщика" HorizontalAlignment="Center" Height="85" Margin="0,320,0,0" VerticalAlignment="Top" Width="378" BorderBrush="#FF676FC5" Background="#FF676FC5" FontSize="28" FontWeight="Bold" Click="btnSetPasses_Click"/>
+        <ComboBox x:Name="groupsComboBox" HorizontalAlignment="Left" Height="65" Margin="449,10,0,0" VerticalAlignment="Top" Width="95" FontSize="20" ItemsSource="{Binding CollectionGroups}"/>
 
     </Grid>
 </Page>
