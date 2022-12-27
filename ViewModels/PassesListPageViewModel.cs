@@ -14,7 +14,7 @@ namespace HEADMEN_EYE.ViewModels
             SqliteDataAdapter sqliteDataAdapter = new SqliteDataAdapter();
 
             connection.Open();
-            SqliteCommand command = new SqliteCommand("SELECT NameStdnt, SurnameStdnt, StudentGroup, Passes FROM Students", connection);
+            SqliteCommand command = new SqliteCommand("SELECT NameStdnt, SurnameStdnt, StudentGroup, Passes FROM Students ORDER BY Passes DESC", connection);
             sqliteDataAdapter.SelectCommand = command;
             sqliteDataAdapter.Fill(dt);
             dataView = dt.DefaultView;
